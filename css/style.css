@@ -170,6 +170,7 @@ img {
   padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
+
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -218,8 +219,24 @@ img {
   display: flex;
 }
 
+.advantages-list .item {
+  width: calc((100% - 90px) / 4);
+}
+
 .advantages-list .item + .item {
   margin-left: 30px;
+}
+
+.advantages-list .icon-wrapper {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  background-color: var(--secondary-background-color);
 }
 
 .advantages-list .title {
