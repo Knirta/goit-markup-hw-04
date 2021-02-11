@@ -338,22 +338,28 @@ img {
 .social-links > .item {
   width: 44px;
   height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
-
-  color: #afb1b8;
-}
-
-.social-links.team-links > .item:hover,
-.social-links.team-links > .item:focus {
-  background: #2196f3;
-  color: #ffffff;
+  overflow: hidden;
 }
 
 .social-links > .item + .item {
   margin-left: 10px;
+}
+
+.social-links .link {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #afb1b8;
+  cursor: pointer;
+}
+
+.social-links.team-links .link:hover,
+.social-links.team-links .link:focus {
+  background: var(--accent-color);
+  color: #ffffff;
 }
 
 .social-links .icon {
@@ -389,16 +395,17 @@ img {
   align-items: center;
 
   color: #afb1b8;
+  cursor: pointer;
 }
 
 .clients-list .item:hover,
 .clients-list .item:focus {
-  border-color: #2196f3;
+  border-color: var(--accent-color);
 }
 
 .clients-list .link:hover,
 .clients-list .link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .clients-list .icon {
@@ -414,23 +421,53 @@ img {
   padding-bottom: 60px;
 }
 
-.footer .logo {
-  margin-bottom: 20px;
-  color: var(--primary-background-color);
+.footer-flex {
+  display: flex;
+  align-items: flex-start;
 }
 
 .footer-contacts {
+  margin-right: 70px;
+}
+
+.footer-contacts .logo {
+  margin-bottom: 20px;
+  margin-right: 0;
+  color: var(--primary-background-color);
+}
+
+.footer-address {
   font-style: normal;
 }
 
-.footer-contacts .item:not(:last-child) {
+.footer-address > .item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer-contacts .link {
+.footer-address .link {
   display: block;
-
   color: rgba(255, 255, 255, 0.6);
+}
+
+.join-us {
+  padding-top: 12px;
+}
+
+.join-us .appeal {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+}
+
+.join-us-links .link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.join-us-links .link:hover,
+.join-us-links .link:focus {
+  background-color: var(--accent-color);
 }
 
 /* Portfolio */
@@ -487,6 +524,13 @@ img {
 
 .portfolio-list .link {
   display: block;
+  height: 100%;
+}
+
+.portfolio-list .link:hover,
+.portfolio-list .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list .content {
